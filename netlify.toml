@@ -1,0 +1,7 @@
+[build] 
+  publish = "dist"
+  command = ""
+
+[dev] 
+  publish = "dist"
+  command = ""
