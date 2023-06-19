@@ -1,4 +1,3 @@
-
 import * as cheerio from "https://esm.sh/cheerio@1.0.0-rc.12";
 import type { Config, Context } from "https://edge.netlify.com";
 import page from "../og-page.js";
@@ -20,7 +19,6 @@ export default async (request: Request, context: Context) => {
   // if the request is for an image
   // just let Netlify handle it as usual. We're done here.
   if(url.pathname.startsWith("/image/")) {
-    console.log("image or homepage");
     return;
   }
   
@@ -68,8 +66,8 @@ export default async (request: Request, context: Context) => {
 
     
   } else {
-    // if this is a visitor, just redirect to the destination 
-    // via he usual shortlink provider
+    // if this is a visitor, just redirect to the 
+    // destination via he usual shortlink provider
     return Response.redirect(`${shortLinkDomain}/${url.pathname}`, 302);
   }
 

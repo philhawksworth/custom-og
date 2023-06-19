@@ -6,6 +6,8 @@ export default (data) => {
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Is it OG?</title>
+   <link rel="icon" href="/image/icons/favicon.ico" sizes="any">
+   <link rel="icon" href="/image/icons/icon.svg" type="image/svg+xml">
    <meta name="twitter:card" content="summary_large_image"/>
    <meta name="twitter:site" content="@netlify"/>
    <meta name="twitter:title" content="${data.title}"/>
