@@ -3,8 +3,8 @@ import type { Config, Context } from "https://edge.netlify.com";
 import page from "../og-page.js";
 
 const shortLinkDomain = "https://ntl.fyi";
-const rootDomain = "https://is-it-og.netlify.app";
-// const rootDomain = "https://test--is-it-og.netlify.live";
+const rootDomain = "https://isitog.netlify.app";
+// const rootDomain = "https://test--isitog.netlify.live";
 
 // examples shortener paths:
   // custom image /43y6uut
