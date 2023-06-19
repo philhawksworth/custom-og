@@ -4,7 +4,8 @@ import type { Config, Context } from "https://edge.netlify.com";
 import page from "../og-page.js";
 
 const shortLinkDomain = "https://ntl.fyi";
-const rootDomain = "https://test--is-it-og.netlify.live";
+const rootDomain = "https://is-it-og.netlify.app";
+// const rootDomain = "https://test--is-it-og.netlify.live";
 
 // examples shortener paths:
   // custom image /43y6uut
@@ -44,8 +45,7 @@ export default async (request: Request, context: Context) => {
     if(image.status == 404) {
       return Response.redirect(`${shortLinkDomain}/${url.pathname}`, 302);
     }
-    
-    
+        
     // get the title and description from the final destination page
     const destination = await fetch(`${shortLinkDomain}/${url.pathname}`);
     const html = await destination.text();
@@ -58,7 +58,8 @@ export default async (request: Request, context: Context) => {
     const ogPage = page({
       title: title,
       description: description,
-      path: url.pathname
+      path: url.pathname,
+      domain: rootDomain
     })
     return new Response(ogPage, {
       headers: { "content-type": "text/html" },

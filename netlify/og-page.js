@@ -11,10 +11,10 @@ export default (data) => {
    <meta name="twitter:title" content="${data.title}"/>
    <meta name="twitter:description" content="${data.description}"/>
    <meta name="twitter:creator" content="@netlify"/>
-   <meta name="twitter:image" content="https://test--is-it-og.netlify.live/image${data.path}.png"/>
-   <meta name="og:image" content="https://test--is-it-og.netlify.live/image${data.path}.png"/>
-   <meta name="og:image:secure_url" content="https://test--is-it-og.netlify.live/image${data.path}.png"/>
-   <meta name="image" property="og:image" content="https://test--is-it-og.netlify.live/image${data.path}.png"/>
+   <meta name="twitter:image" content="${data.domain}/image${data.path}.png"/>
+   <meta name="og:image" content="${data.domain}/image${data.path}.png"/>
+   <meta name="og:image:secure_url" content="${data.domain}/image${data.path}.png"/>
+   <meta name="image" property="og:image" content="${data.domain}/image${data.path}.png"/>
    <meta property="og:site_name" content="Netlify"/>
    <meta property="og:title" content="${data.title}"/>
    <meta property="og:description" content="${data.description}"/>
