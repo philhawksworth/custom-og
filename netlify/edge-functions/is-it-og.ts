@@ -20,6 +20,7 @@ export default async (request: Request, context: Context) => {
   // if the request is for an image
   // just let Netlify handle it as usual. We're done here.
   if(url.pathname.startsWith("/image/")) {
+    console.log("image or homepage");
     return;
   }
   
