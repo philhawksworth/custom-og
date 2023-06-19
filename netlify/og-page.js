@@ -21,7 +21,7 @@ export default (data) => {
  </head>
  <body>
    <h1>OG image for this URL</h1>
-   <img src="https://test--is-it-og.netlify.live/image/${data.path}.png" />
+   <img src="${data.domain}/image/${data.path}.png" />
  </body>
  </html>
  `;
