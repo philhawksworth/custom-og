@@ -4,11 +4,8 @@ import page from "../og-page.js";
 
 const shortLinkDomain = "https://ntl.fyi";
 const rootDomain = "https://ourog.netlify.app";
-// const rootDomain = "https://test--ourog.netlify.live";
-
-// examples shortener paths:
-  // custom image /43y6uut
-  // no custom image: /3Jf2bMF
+// Or, for local testing with netlify dev
+// const rootDomain = "https://test--ourog.netlify.live"; 
 
 
 export default async (request: Request, context: Context) => {
@@ -49,8 +46,8 @@ export default async (request: Request, context: Context) => {
     const destination = await fetch(`${shortLinkDomain}/${url.pathname}`);
     const html = await destination.text();
     const $ = cheerio.load(html);
-    const title =  $('meta[property="og:title"]').attr('content') || "Some title";
-    const description =  $('meta[property="og:description"]').attr('content') || "Some description";
+    const title =  $('meta[property="og:title"]').attr('content') || "";
+    const description =  $('meta[property="og:description"]').attr('content') || "";
     
     // Populate our OG page template
     // and return it as HTML
