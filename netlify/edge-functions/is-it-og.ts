@@ -73,4 +73,5 @@ export default async (request: Request, context: Context) => {
 // All requests to this domain come through here
 export const config: Config = {
   path: "/*",
+  onError: "bypass"
 };

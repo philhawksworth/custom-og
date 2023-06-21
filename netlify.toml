@@ -5,3 +5,16 @@
 [dev] 
   publish = "dist"
   command = ""
+
+# If the Edge Function fails, we contniue the request chain
+# these redirect rules will pass along requests to the 
+# original shortner (other than local image requests)
+[[redirects]]
+  from = "/image/*"
+  to = "/image/:splat"
+  status = "200"
+
+[[redirects]]
+  from = "/*"
+  to = "https://ntl.fyi/:splat"
+  status = "302"
