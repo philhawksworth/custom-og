@@ -25,6 +25,7 @@ export default async (request: Request, context: Context) => {
     "slack",
     "Twitterbot",
     "LinkedInBot",
+    "Mastodon",
     // "Mozilla" // for testing
   ];
 
