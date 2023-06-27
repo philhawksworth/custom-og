@@ -7,6 +7,7 @@ Helpful for displaying custom branding in short links to third party resources.
 Currently serving custom OG images to:
 
 - Twitter
+- Mastodon
 - LinkedIn
 - Slack
 
